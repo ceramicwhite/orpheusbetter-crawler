@@ -1,0 +1,15 @@
+services:
+  orpheusbetter:
+    image: ceramicwhite/orpheusbetter:dev
+    container_name: orpheusbetter
+    stop_grace_period: 3s
+    volumes:
+      - ./data/torrents:/app/torrents
+      - ./data/downloads:/app/downloads:ro
+      - ./data/config:/app/config:ro
+      - ./data/output:/app/output
+      - ./entrypoint.sh:/entrypoint.sh:ro
+    ports:
+      - 8080:8080
+    environment:
+      - CONFIG_FILE=/app/config/config.conf

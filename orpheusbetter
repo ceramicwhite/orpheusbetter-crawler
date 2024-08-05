@@ -11,10 +11,11 @@ from packaging.version import Version
 from urllib.parse import urlparse, parse_qsl
 from multiprocessing import cpu_count
 
-import tagging
-import transcode
-import whatapi
-from _version import __version__
+# Update import statements to use data/ directory
+from data import tagging
+from data import transcode
+from data import whatapi
+from data._version import __version__
 
 if sys.version_info < (3, 6, 0):
     raise Exception("Requires Python 3.6.0 or newer")
@@ -185,8 +186,6 @@ def main():
             seen.add(str(id))
         pickle.dump(seen, open(args.cache, 'wb'))
         return
-
-
 
     print("Searching for transcode candidates...")
     if args.release_urls:

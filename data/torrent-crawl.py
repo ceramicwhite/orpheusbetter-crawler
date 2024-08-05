@@ -2,7 +2,7 @@
 
 import sys
 import os
-import ConfigParser
+import configparser
 import json
 import argparse
 
@@ -23,7 +23,7 @@ def main():
 
     args = parser.parse_args()
 
-    config = ConfigParser.SafeConfigParser()
+    config = configparser.SafeConfigParser()
     try:
         open(args.config)
         config.read(args.config)

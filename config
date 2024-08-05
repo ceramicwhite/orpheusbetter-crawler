@@ -1,0 +1,13 @@
+[orpheus]
+username = ${USERNAME}
+password = ${PASSWORD}
+data_dir = ${DATA_DIR:-/app/data}
+output_dir = ${OUTPUT_DIR:-/app/output} 
+torrent_dir = ${TORRENT_DIR:-/app/torrents}
+formats = ${FORMATS:-flac, v0, 320}
+media = ${MEDIA:-web, sacd, vinyl, dvd, blu-ray, dat, cd, soundboard}
+24bit_behaviour = ${BIT_BEHAVIOUR:-0}
+tracker = ${TRACKER:-https://home.opsfet.ch/}
+mode = ${MODE:-both}
+api = ${API:-https://orpheus.network}
+source = ${SOURCE:-OPS}
